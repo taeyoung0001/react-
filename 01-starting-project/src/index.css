@@ -25,7 +25,6 @@ main {
   margin: auto;
 }
 
-
 main h2 {
   text-align: center;
   font-family: "Roboto Condensed", sans-serif;
@@ -33,6 +32,9 @@ main h2 {
   color: #a18aba;
 }
 
+.none-topic {
+  text-align: center;
+}
 
 #examples {
   margin: 3rem auto;
