@@ -1,3 +1,4 @@
+import GameBoard from "./Game_board";
 import Player from "./Player";
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
           <Player name={"Player1"} symbol={"X"} />
           <Player name={"Player2"} symbol={"O"} />
         </ol>
+        <GameBoard />
       </div>
     </main>
   );
