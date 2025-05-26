@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { EXAMPLES } from "../data";
 import TabButton from "./TabButton";
+import Section from "./Section";
 
 const Exampless = () => {
   const [selectedTopic, setSelectedTopic] = useState("");
@@ -12,33 +13,20 @@ const Exampless = () => {
   console.log(selectedTopic);
 
   return (
-    <section id="examples">
-      <h2>Example</h2>
+    <Section title={"Example"} id="examples">
       <menu>
         {/* () => handleSelect 를 사용하면 실행하지 않고 참조만 함 */}
         {/* 인자가 있을 때 사용해야함 */}
-        <TabButton
-          isSelected={selectedTopic === "components"}
-          onSelect={() => handleSelect("components")}
-        >
+        <TabButton isSelected={selectedTopic === "components"} onClick={() => handleSelect("components")}>
           Components
         </TabButton>
-        <TabButton
-          isSelected={selectedTopic === "jsx"}
-          onSelect={() => handleSelect("jsx")}
-        >
+        <TabButton isSelected={selectedTopic === "jsx"} onClick={() => handleSelect("jsx")}>
           JSX
         </TabButton>
-        <TabButton
-          isSelected={selectedTopic === "props"}
-          onSelect={() => handleSelect("props")}
-        >
+        <TabButton isSelected={selectedTopic === "props"} onClick={() => handleSelect("props")}>
           Props
         </TabButton>
-        <TabButton
-          isSelected={selectedTopic === "state"}
-          onSelect={() => handleSelect("state")}
-        >
+        <TabButton isSelected={selectedTopic === "state"} onClick={() => handleSelect("state")}>
           State
         </TabButton>
       </menu>
@@ -53,7 +41,7 @@ const Exampless = () => {
           <pre>{EXAMPLES[selectedTopic].code}</pre>
         </div>
       )}
-    </section>
+    </Section>
   );
 };
 
