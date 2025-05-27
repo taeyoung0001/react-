@@ -5,6 +5,8 @@ const initialGameBoard = [
 ];
 
 const GameBoard = () => {
+  const updatedBoard = [...initialGameBoard];
+  console.log(updatedBoard);
   return (
     <ol id="game-board">
       {initialGameBoard.map((row, rowIndex) => (
